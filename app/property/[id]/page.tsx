@@ -72,11 +72,11 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
                 <path d="M190 70 H430" stroke="#86A09D" style={css("stroke-width: 1")} />
                 <path d="M186 74 L194 66 M426 74 L434 66" stroke="#86A09D" style={css("stroke-width: 1")} />
                 <path d="M190 62 V78 M430 62 V78" stroke="#86A09D" style={css("stroke-width: 1")} />
-                <text x="310" y="60" fontSize="13" textAnchor="middle" fill="#86A09D" style={css("font-variant-numeric: tabular-nums")}>[62] ft</text>
+                <text x="310" y="60" fontSize="13" textAnchor="middle" fill="#86A09D" style={css("font-variant-numeric: tabular-nums")}>Frontage</text>
                 <path d="M166 90 V470" stroke="#86A09D" style={css("stroke-width: 1")} />
                 <path d="M162 94 L170 86 M162 474 L170 466" stroke="#86A09D" style={css("stroke-width: 1")} />
                 <path d="M158 90 H174 M158 470 H174" stroke="#86A09D" style={css("stroke-width: 1")} />
-                <text x="152" y="284" fontSize="13" textAnchor="end" fill="#86A09D" style={css("font-variant-numeric: tabular-nums")}>[125] ft</text>
+                <text x="152" y="284" fontSize="13" textAnchor="end" fill="#86A09D" style={css("font-variant-numeric: tabular-nums")}>Depth</text>
                 <rect x="190" y="90" width="240" height="380" stroke="#5C7D82" style={css("stroke-width: 1.5")} />
                 <rect x="240" y="200" width="140" height="120" fill="#0A1D20" stroke="#5C7D82" style={css("stroke-width: 1.5")} />
                 <rect x="262" y="222" width="96" height="76" fill="#6EE7C8" opacity="0.32" filter="url(#pBloom)" />
