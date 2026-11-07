@@ -76,3 +76,6 @@ Use plain sentences and no dashes as punctuation.`;
   }));
   return Response.json({ drafts, generatedBy: "ai", dropped: list.length - drafts.length });
 }
+
+/** Claude calls can take longer than the default serverless limit. */
+export const maxDuration = 30;

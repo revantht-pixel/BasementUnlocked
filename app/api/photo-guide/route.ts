@@ -80,3 +80,6 @@ export async function POST(req: Request): Promise<Response> {
   }
   return Response.json({ ...EXAMPLE, generatedBy: "example" });
 }
+
+/** Claude calls can take longer than the default serverless limit. */
+export const maxDuration = 30;

@@ -48,3 +48,6 @@ export async function POST(req: Request) {
   if (text && valid(text)) return Response.json({ answer: noDashes(text.trim()), generatedBy: "ai" });
   return Response.json({ answer: noDashes(template(report)), generatedBy: "template" });
 }
+
+/** Claude calls can take longer than the default serverless limit. */
+export const maxDuration = 30;

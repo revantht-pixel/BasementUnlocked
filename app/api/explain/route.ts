@@ -42,3 +42,6 @@ export async function POST(req: Request) {
   const t = buildTemplatePlan(report);
   return Response.json({ summary: t.summary.map((s) => ({ ...s, text: noDashes(s.text) })), email: t.email.map((s) => ({ ...s, text: noDashes(s.text) })), generatedBy: "template" });
 }
+
+/** Claude calls can take longer than the default serverless limit. */
+export const maxDuration = 30;
