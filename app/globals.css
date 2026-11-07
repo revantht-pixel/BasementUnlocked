@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+  --night: #061416;
+  --night-2: #0a1d20;
+  --text: #e8f4f2;
+  --text-2: #a9c0be;
+  --text-3: #86a09d;
+  --ice: #6ee7c8;
+  --ink-on-ice: #052520;
+  --window: #ffb547;
+  --mist: #9db4d8;
+  --coral: #ff7a6b;
+}
+
+html,
+body {
+  margin: 0;
+  background: #061416;
+  color: var(--text);
+  font-family: var(--font-manrope), Manrope, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100dvh;
+  background: linear-gradient(180deg, #061416 0%, #0a1d20 100%) fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-space), "Space Grotesk", system-ui, sans-serif;
+}
+
+a {
+  color: var(--text);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+label:focus-within,
+summary:focus-visible {
+  outline: 2px solid var(--ice);
+  outline-offset: 3px;
+}
+
+input[type="radio"] {
+  accent-color: var(--ice);
+}
+
+.btn {
+  transition: transform 500ms cubic-bezier(0.32, 0.72, 0, 1), box-shadow 500ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.btn:hover {
+  box-shadow: 0 0 48px rgba(110, 231, 200, 0.35);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn .btn-ic {
+  transition: transform 500ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.btn:hover .btn-ic {
+  transform: translate(2px, -1px) scale(1.05);
+}
+
+.rise {
+  animation: rise 900ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+.rise2 {
+  animation: rise 900ms cubic-bezier(0.32, 0.72, 0, 1) 120ms both;
+}
+.rise3 {
+  animation: rise 900ms cubic-bezier(0.32, 0.72, 0, 1) 240ms both;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.seg {
+  transition: opacity 700ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.fade {
+  transition: opacity 700ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.tile {
+  transition: border-color 500ms cubic-bezier(0.32, 0.72, 0, 1), background-color 500ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.opt {
+  transition: background-color 400ms cubic-bezier(0.32, 0.72, 0, 1), color 400ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.opt input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.dimmer {
+  animation: dimOff 2800ms cubic-bezier(0.32, 0.72, 0, 1) 500ms both;
+}
+@keyframes dimOff {
+  from {
+    opacity: 0.95;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.spillAnim {
+  animation: spillIn 2800ms cubic-bezier(0.32, 0.72, 0, 1) 500ms both;
+}
+@keyframes spillIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn .btn-ic,
+  .rise,
+  .rise2,
+  .rise3,
+  .seg,
+  .fade,
+  .tile,
+  .opt,
+  .dimmer,
+  .spillAnim {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media print {
+  header,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

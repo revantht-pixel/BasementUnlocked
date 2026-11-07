@@ -1,0 +1,117 @@
+{
+  "version": "2026-11-06.draft-1",
+  "note": "Rules marked review=secondary must be confirmed against the primary text (Salt Lake City 21A.40.200) before the demo. Edit explanations here; the engine in lib/screen.ts decides statuses.",
+  "rules": [
+    {
+      "id": "in-city",
+      "n": 1,
+      "title": "Inside Salt Lake City limits",
+      "sourceIds": ["ugrc-boundaries"],
+      "explain": {
+        "met": "The parcel is inside the city boundary, so Salt Lake City rules apply.",
+        "not_met": "The parcel is outside Salt Lake City, so these rules do not apply.",
+        "unknown": "We could not confirm which city this parcel is in.",
+        "not_applicable": "Does not apply."
+      }
+    },
+    {
+      "id": "zone",
+      "n": 2,
+      "title": "Residential zone allows a basement apartment",
+      "sourceIds": ["ut-10-21-303"],
+      "explain": {
+        "met": "State law makes one internal accessory unit a permitted use in residential zones.",
+        "not_met": "This zone is not primarily residential, so state law does not make the unit a permitted use.",
+        "unknown": "We could not read the zone for this parcel. Ask the city to confirm it is residential.",
+        "not_applicable": "Does not apply."
+      }
+    },
+    {
+      "id": "dwelling",
+      "n": 3,
+      "title": "Detached single-family house",
+      "sourceIds": ["ut-10-21-303"],
+      "explain": {
+        "met": "These units go inside a primary single-family home.",
+        "not_met": "Duplexes, townhomes and other buildings are outside what we have reviewed.",
+        "unknown": "Tell us the kind of home so we know which rules apply.",
+        "not_applicable": "Does not apply."
+      }
+    },
+    {
+      "id": "one-unit",
+      "n": 4,
+      "title": "No other accessory unit",
+      "sourceIds": ["slc-21a-40-200", "ksl-slc-adu-2023"],
+      "explain": {
+        "met": "Salt Lake City allows one accessory unit per property, and there is none yet.",
+        "not_met": "There is already a second unit, and the city allows one accessory unit per property.",
+        "unknown": "We could not tell whether a second unit already exists. Ask the city.",
+        "not_applicable": "Does not apply."
+      }
+    },
+    {
+      "id": "owner-occupancy",
+      "n": 5,
+      "title": "Owner lives on the property",
+      "sourceIds": ["slc-21a-40-200", "ut-10-21-303"],
+      "explain": {
+        "met": "You will live in the main house, so the owner-occupancy rule is met.",
+        "not_met": "Salt Lake City generally limits renting this kind of unit to owner-occupied homes. Ask the city whether an exception fits you.",
+        "unknown": "Salt Lake City generally requires the owner to live on the property, with some exceptions. Tell us if you will.",
+        "not_applicable": "Does not apply."
+      },
+      "nextAction": "Ask the city which owner-occupancy exceptions apply and how to document that you live there."
+    },
+    {
+      "id": "rental-length",
+      "n": 6,
+      "title": "Rentals of 30 days or more",
+      "sourceIds": ["ut-10-21-303"],
+      "explain": {
+        "met": "Cities may ban rentals shorter than 30 days. Your plan is long-term.",
+        "not_met": "Rentals under 30 days can be banned. Plan on 30 days or more.",
+        "unknown": "Tell us how long each rental would be.",
+        "not_applicable": "Does not apply."
+      }
+    },
+    {
+      "id": "parking",
+      "n": 7,
+      "title": "One extra parking space",
+      "sourceIds": ["ut-10-21-303", "slc-21a-40-200"],
+      "explain": {
+        "met": "You have room for the extra on-site space a city may require.",
+        "not_met": "A city may require one more on-site space. Ask whether an exception applies.",
+        "unknown": "The city may require one more on-site space. You weren't sure, so the city should confirm.",
+        "not_applicable": "Does not apply."
+      },
+      "nextAction": "Ask the city whether the unit needs one extra on-site parking space at this address."
+    },
+    {
+      "id": "lot-size",
+      "n": 8,
+      "title": "Minimum lot size",
+      "sourceIds": ["ut-10-21-303", "slc-21a-40-200"],
+      "explain": {
+        "met": "The lot is above any minimum.",
+        "not_met": "The lot is below a minimum the city has adopted.",
+        "unknown": "Confirm whether the city has adopted a minimum lot size.",
+        "not_applicable": "State law lets cities ban units on lots of 6,000 sq ft or less. Salt Lake City's ordinance sets no minimum, so this does not apply."
+      }
+    },
+    {
+      "id": "building-codes",
+      "n": 9,
+      "title": "Building, fire and egress codes",
+      "sourceIds": ["ut-10-21-303", "irc-r310"],
+      "explain": {
+        "met": "Inspection passed.",
+        "not_met": "Inspection found a problem.",
+        "unknown": "An inspector checks the emergency-exit window, ceiling height and smoke alarms. A photo can help you prepare.",
+        "not_applicable": "Does not apply."
+      },
+      "nextAction": "Ask the city about a building permit and inspections for the unit."
+    }
+  ]
+}

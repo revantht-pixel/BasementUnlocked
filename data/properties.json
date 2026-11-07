@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sugar-house",
+    "address": "[Street address], Sugar House, Salt Lake City, UT [ZIP]",
+    "parcelId": "[Parcel ID]",
+    "jurisdiction": { "value": "Salt Lake City", "provenance": "public_record", "sourceId": "ugrc-boundaries", "retrievedAt": "[date]" },
+    "zone": { "value": "R-1/5000", "provenance": "public_record", "sourceId": "slc-21a-40-200", "retrievedAt": "[date]" },
+    "lotAcres": { "value": 0.17, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "builtYear": { "value": 1948, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "buildingSqft": { "value": 1900, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "propertyClass": { "value": "Single-family residence", "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "houseCount": { "value": 1, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "dataMode": "saved",
+    "placeholder": true
+  },
+  {
+    "id": "avenues",
+    "address": "[Street address], The Avenues, Salt Lake City, UT [ZIP]",
+    "parcelId": "[Parcel ID]",
+    "jurisdiction": { "value": "Salt Lake City", "provenance": "public_record", "sourceId": "ugrc-boundaries", "retrievedAt": "[date]" },
+    "zone": { "value": "SR-1A", "provenance": "public_record", "sourceId": "slc-21a-40-200", "retrievedAt": "[date]" },
+    "lotAcres": { "value": 0.14, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "builtYear": { "value": 1925, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "buildingSqft": { "value": 2100, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "propertyClass": { "value": "Single-family residence", "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "houseCount": { "value": 1, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "dataMode": "saved",
+    "placeholder": true
+  },
+  {
+    "id": "rose-park",
+    "address": "[Street address], Rose Park, Salt Lake City, UT [ZIP]",
+    "parcelId": "[Parcel ID]",
+    "jurisdiction": { "value": "Salt Lake City", "provenance": "public_record", "sourceId": "ugrc-boundaries", "retrievedAt": "[date]" },
+    "zone": { "value": "R-1/7000", "provenance": "public_record", "sourceId": "slc-21a-40-200", "retrievedAt": "[date]" },
+    "lotAcres": { "value": 0.21, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "builtYear": { "value": 1957, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "buildingSqft": { "value": 1450, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "propertyClass": { "value": "Single-family residence", "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "houseCount": { "value": 1, "provenance": "public_record", "sourceId": "ugrc-parcels-slc", "retrievedAt": "[date]" },
+    "dataMode": "saved",
+    "placeholder": true
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ut-10-21-303",
+    "title": "Utah Code 10-21-303, internal accessory dwelling units",
+    "section": "Subsections (1) to (5)",
+    "url": "https://le.utah.gov/xcode/Title10/Chapter21/C10-21-S303_2025110620251206.html",
+    "review": "verified",
+    "reviewedOn": "2026-11-06"
+  },
+  {
+    "id": "slc-21a-40-200",
+    "title": "Salt Lake City ordinance 21A.40.200, accessory dwelling units",
+    "section": "21A.40.200",
+    "url": "https://codelibrary.amlegal.com/codes/saltlakecityut/latest/saltlakecity_ut/0-0-0-68737",
+    "review": "secondary"
+  },
+  {
+    "id": "slc-adu-handbook",
+    "title": "Salt Lake City ADU handbook",
+    "url": "https://www.slcdocs.com/Planning/Guides/ADU_Handbook.pdf",
+    "review": "secondary"
+  },
+  {
+    "id": "ksl-slc-adu-2023",
+    "title": "KSL: Salt Lake City passes new accessory dwelling unit ordinance",
+    "url": "https://www.ksl.com/article/50616025/salt-lake-city-passes-new-accessory-dwelling-unit-ordinance-will-it-ease-affordability",
+    "review": "secondary"
+  },
+  {
+    "id": "ugrc-boundaries",
+    "title": "UGRC municipal boundaries",
+    "url": "https://gis.utah.gov/products/sgid/boundaries/municipal/",
+    "review": "verified",
+    "reviewedOn": "2026-11-06"
+  },
+  {
+    "id": "ugrc-parcels-slc",
+    "title": "Salt Lake County parcel records (Parcels_SaltLake_LIR)",
+    "url": "https://services1.arcgis.com/99lidPhWCzftIe9K/ArcGIS/rest/services/Parcels_SaltLake_LIR/FeatureServer/0",
+    "review": "verified",
+    "reviewedOn": "2026-11-06"
+  },
+  {
+    "id": "hud-fmr",
+    "title": "HUD Fair Market Rents",
+    "url": "https://www.huduser.gov/portal/datasets/fmr.html",
+    "review": "verified",
+    "reviewedOn": "2026-11-06"
+  },
+  {
+    "id": "irc-r310",
+    "title": "International Residential Code R310, emergency escape and rescue openings",
+    "url": "https://codes.iccsafe.org/content/IRC2021P1/chapter-3-building-planning",
+    "review": "secondary"
+  }
+]
