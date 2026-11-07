@@ -13,8 +13,7 @@ Nothing here is guessed silently. Each item is something the app currently shows
 ## Unverified assumptions in code
 
 - [ ] HUD Fair Market Rents endpoint shape in `lib/rent.ts` (Salt Lake County entity `4903599999`) is best effort. Without `HUD_API_TOKEN` the UI shows `[$X] to [$Y]`.
-- [ ] UGRC geocoder and municipal boundary URLs in `lib/lookup.ts` are best effort. Live address lookup stops at "unavailable" for addresses that are not a saved example.
-- [ ] Mapping a live parcel from `Parcels_SaltLake_LIR` into the `Property` type is not implemented yet.
+- [x] **Live address lookup works for any Salt Lake County address, with no API key** (`lib/lookup.ts`). It finds the parcel by street address in the county service, confirms the city from the UGRC boundary layer at the parcel's location, reads the zone from the city zoning layer, and rebuilds the record from the parcel id (`live-<parcel id>`). Tested 2026-11-06 with real addresses: in-city, other city (Millcreek, Sandy), not found, and non-residential. Known limits: condos and multi-unit buildings may match the first unit; a parcel whose centroid falls outside its own polygon could read the wrong zone (rare).
 - [ ] The `PARCEL_CITY` field is often the mailing city. Jurisdiction must come from the boundary layer, never from that field.
 - [ ] Egress window figures on the photo screen come from the typical IRC R310 rule and must be confirmed with Salt Lake City Building Services.
 

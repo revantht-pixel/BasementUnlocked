@@ -5,7 +5,12 @@ import { useRouter } from "next/navigation";
 import { css } from "@/lib/css";
 import { Btn } from "@/components/ui";
 
-type LookupResponse = { scope: "ok"; propertyId: string } | { scope: "outside" } | { scope: "unavailable" };
+type LookupResponse =
+  | { scope: "ok"; propertyId: string }
+  | { scope: "outside"; city: string | null }
+  | { scope: "notfound" }
+  | { scope: "not_residential"; propertyClass: string | null }
+  | { scope: "unavailable" };
 
 export default function AddressForm() {
   const router = useRouter();
@@ -31,10 +36,16 @@ export default function AddressForm() {
         return;
       }
       if (data.scope === "outside") {
-        router.push("/out-of-scope");
+        router.push(data.city ? `/out-of-scope?city=${encodeURIComponent(data.city)}` : "/out-of-scope");
         return;
       }
-      setMessage("Live lookup is not available right now. Try one of the saved examples below.");
+      if (data.scope === "notfound") {
+        setMessage("We couldn't find that address in Salt Lake County records. Check the street number and name, for example 1216 E Driggs Ave.");
+      } else if (data.scope === "not_residential") {
+        setMessage("That parcel isn't a residential property, so we can't screen it for a basement apartment.");
+      } else {
+        setMessage("Live lookup is not available right now. Try one of the saved examples below.");
+      }
     } catch {
       setMessage("Live lookup is not available right now. Try one of the saved examples below.");
     }

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import { LinkBtn, Provenance } from "@/components/ui";
-import { getProperty } from "@/lib/data";
+import { getPropertyAny } from "@/lib/property";
 import { css } from "@/lib/css";
 import type { Fact, Provenance as Prov } from "@/lib/types";
 
@@ -23,7 +23,7 @@ const LEGEND: { kind: Prov; label: string; text: string }[] = [
 
 export default async function PropertyPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const p = getProperty(id);
+  const p = await getPropertyAny(id);
   if (!p) notFound();
 
   const rows: Row[] = [

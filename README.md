@@ -10,7 +10,7 @@ Built for **Crimson Hacks 2026** (theme: State of Utah).
 
 ## How it works
 
-1. **Enter an address** (or pick a saved example). The parcel is confirmed to be inside Salt Lake City.
+1. **Enter any Salt Lake County address** (or pick a saved example). The parcel is found in county records, and its city is confirmed from the official boundary layer, so addresses in other cities are rejected honestly. No API key needed.
 2. **Answer six questions.** Every question has "I don't know". The house drawing reacts as you answer.
 3. **Read the result.** Nine checks, each with its source, plus a counter of what the city must confirm and a HUD rent range.
 4. **Get your plan.** An AI-written summary and an email to Salt Lake City Planning.
@@ -30,7 +30,6 @@ npm run build
 | Variable | Used for | Without it |
 | --- | --- | --- |
 | `ANTHROPIC_API_KEY` | Summary, email, ask, photo coach, rules drafting | Template text, labelled as examples |
-| `UGRC_API_KEY` | Live address lookup (best effort) | Saved properties only |
 | `HUD_API_TOKEN` | Area rent range | Shows `[$X] to [$Y]` placeholders |
 
 ## Project layout

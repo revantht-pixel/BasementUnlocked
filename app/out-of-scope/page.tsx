@@ -2,7 +2,11 @@ import Header from "@/components/Header";
 import { LinkBtn, Provenance } from "@/components/ui";
 import { css } from "@/lib/css";
 
-export default function OutOfScopePage() {
+export default async function OutOfScopePage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const raw = (await searchParams).city;
+  const cityParam = (Array.isArray(raw) ? raw[0] : raw)?.slice(0, 40).replace(/[^A-Za-z .'-]/g, "") || "";
+  const city = cityParam || "another city";
+  const mapLabel = cityParam || "Other city";
   return (
     <div style={css("min-height: 100dvh; font-size: 18px; line-height: 1.55; padding-bottom: 96px")}>
       <Header />
@@ -11,7 +15,7 @@ export default function OutOfScopePage() {
           <figure className="rise3" style={css("flex: 1 1 440px; min-width: 0; margin: 0")}>
             <div style={css("padding: 6px; border-radius: 28px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07)")}>
               <div style={css("border-radius: 22px; overflow: hidden; background: rgba(255,255,255,0.045); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08)")}>
-                <svg viewBox="0 0 540 460" width="540" height="460" fill="none" role="img" aria-label="Boundary map. The parcel sits just on the Millcreek side of the Salt Lake City line." style={css("max-width: 100%; height: auto; display: block")}>
+                <svg viewBox="0 0 540 460" width="540" height="460" fill="none" role="img" aria-label="Boundary map. The parcel sits just outside the Salt Lake City line." style={css("max-width: 100%; height: auto; display: block")}>
                   <defs>
                     <filter id="oBloom" x="-200%" y="-200%" width="500%" height="500%">
                       <feGaussianBlur stdDeviation="10" />
@@ -26,7 +30,7 @@ export default function OutOfScopePage() {
                   <path d="M306 0 C 284 120, 338 230, 298 460" stroke="#9DB4D8" opacity="0.35" filter="url(#oLineGlow)" style={css("stroke-width: 6")} />
                   <path d="M306 0 C 284 120, 338 230, 298 460" stroke="#9DB4D8" style={css("stroke-width: 1.5; stroke-dasharray: 10 7")} />
                   <text x="32" y="56" fontSize="18" fill="#E8F4F2" style={css("font-weight: 600; letter-spacing: -0.02em")}>Salt Lake City</text>
-                  <text x="344" y="56" fontSize="18" fill="#A9C0BE" style={css("font-weight: 600; letter-spacing: -0.02em")}>Millcreek</text>
+                  <text x="344" y="56" fontSize="18" fill="#A9C0BE" style={css("font-weight: 600; letter-spacing: -0.02em")}>{mapLabel}</text>
                   <rect x="314" y="190" width="32" height="32" fill="#6EE7C8" opacity="0.6" filter="url(#oBloom)" />
                   <rect x="322" y="198" width="16" height="16" fill="#6EE7C8" stroke="#FFE2B0" style={css("stroke-width: 1")} />
                   <path d="M340 202 L418 150" stroke="#86A09D" style={css("stroke-width: 1")} />
@@ -40,7 +44,7 @@ export default function OutOfScopePage() {
           <div style={css("flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px")}>
             <h1 className="rise" style={css("margin: 0; font-size: 56px; font-weight: 600; letter-spacing: -0.04em; line-height: 0.98; color: #E8F4F2; max-width: 14ch")}>This address is outside Salt Lake City</h1>
             <p className="rise2" style={css("margin: 0; font-size: 20px; line-height: 1.5; color: #E8F4F2; max-width: 46ch")}>
-              Some addresses say Salt Lake City in the mailing address but sit inside another city, such as Millcreek or South Salt Lake. This parcel is outside the city limits.
+              {cityParam ? `This parcel is inside ${cityParam} city limits, not Salt Lake City. Mailing addresses can say Salt Lake City even when the parcel is in another city.` : "Some addresses say Salt Lake City in the mailing address but sit inside another city, such as Millcreek or South Salt Lake. This parcel is outside the city limits."}
             </p>
             <p style={css("margin: 0; font-size: 18px; color: #A9C0BE; max-width: 52ch")}>
               Each city writes its own basement-apartment rules. We have only reviewed Salt Lake City&apos;s, so we won&apos;t guess.

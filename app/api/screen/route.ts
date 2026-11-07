@@ -1,4 +1,5 @@
-import { parseAnswers, getProperty } from "@/lib/data";
+import { parseAnswers } from "@/lib/data";
+import { getPropertyAny } from "@/lib/property";
 import { screen } from "@/lib/screen";
 
 export async function POST(req: Request) {
@@ -8,7 +9,7 @@ export async function POST(req: Request) {
   } catch {
     return Response.json({ error: "Invalid JSON" }, { status: 400 });
   }
-  const property = body.propertyId ? getProperty(body.propertyId) : undefined;
+  const property = body.propertyId ? await getPropertyAny(body.propertyId) : undefined;
   if (!property) return Response.json({ error: "Unknown property" }, { status: 404 });
   return Response.json(screen(property, parseAnswers(body.answers ?? {})));
 }
