@@ -117,7 +117,7 @@ export default function PlanView({ property, answers, rent }: { property: Proper
         Your basement plan
       </h1>
       <p className="rise2" style={css("margin: 0 0 88px; font-size: 20px; color: #A9C0BE; max-width: 60ch")}>
-        For {property.address}. Built from your 9 checks on [date]. Numbers after each sentence point to the check it comes from.
+        For {property.address}. Built from your 9 checks. Numbers after each sentence point to the check it comes from.
       </p>
       <div style={css("display: flex; flex-wrap: wrap; gap: 64px 56px; align-items: flex-start")}>
         <div className="rise3" style={css("flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 28px")}>

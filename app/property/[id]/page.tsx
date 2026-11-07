@@ -40,7 +40,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
 
   return (
     <div style={css("min-height: 100dvh; font-size: 18px; line-height: 1.55; padding-bottom: 96px")}>
-      <Header dataNote={p.dataMode === "live" ? "Live data" : "Saved data from [date]"} />
+      <Header dataNote={p.dataMode === "live" ? "Live data" : "Saved data from Nov 6, 2026"} />
       <main style={css("max-width: 1200px; margin: 0 auto; padding: 48px 32px 0; box-sizing: border-box")}>
         <p style={css("margin: 0 0 14px; font-size: 15px; color: #86A09D")}>Step 1 of 3: Confirm your property</p>
         <h1 className="rise" style={css("margin: 0 0 14px; font-size: 56px; font-weight: 600; letter-spacing: -0.04em; line-height: 0.98; color: #E8F4F2")}>Is this your property?</h1>

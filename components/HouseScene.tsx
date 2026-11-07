@@ -242,7 +242,7 @@ export default function HouseScene({
 <line x1="455.2" y1="152.4" x2="490.4" y2="134.8" stroke="#86A09D" style={css("stroke-width: 1")} />
 <line x1="895.2" y1="372.4" x2="930.4" y2="354.8" stroke="#86A09D" style={css("stroke-width: 1")} />
 <line x1="466" y1="153" x2="480" y2="134" stroke="#86A09D" style={css("stroke-width: 1")} />
-<text transform="translate(692.8 253.6) rotate(26.57)" x="0" y="-9" textAnchor="middle" fill="#86A09D" style={css("font-family: Geist, Helvetica, sans-serif; font-size: 14px")}>{lotLabel}</text>
+<text transform="translate(692.8 253.6) rotate(26.57)" x="0" y="-9" textAnchor="middle" fill="#86A09D" style={css("font-family: Manrope, sans-serif; font-size: 14px")}>{lotLabel}</text>
 </g>
 </>
 )}

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { css } from "@/lib/css";
 
 /** Floating island header, shared by every screen. */
-export default function Header({ dataNote = "Saved data from [date]", absolute = false }: { dataNote?: string; absolute?: boolean }) {
+export default function Header({ dataNote = "Saved data from Nov 6, 2026", absolute = false }: { dataNote?: string; absolute?: boolean }) {
   return (
     <header style={css(`padding: 16px 24px 0; display: flex; justify-content: center; ${absolute ? "position: relative; z-index: 2;" : ""}`)}>
       <div

@@ -41,6 +41,13 @@
     "reviewedOn": "2026-11-06"
   },
   {
+    "id": "slc-zoning-layer",
+    "title": "Salt Lake City zoning layer (maps.slc.gov, Hosted/Zoning, layer 5)",
+    "url": "https://maps.slc.gov/server/rest/services/Hosted/Zoning/FeatureServer/5",
+    "review": "verified",
+    "reviewedOn": "2026-11-06"
+  },
+  {
     "id": "hud-fmr",
     "title": "HUD Fair Market Rents",
     "url": "https://www.huduser.gov/portal/datasets/fmr.html",

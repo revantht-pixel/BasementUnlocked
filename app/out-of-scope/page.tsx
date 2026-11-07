@@ -26,7 +26,7 @@ export default function OutOfScopePage() {
                   <path d="M306 0 C 284 120, 338 230, 298 460" stroke="#9DB4D8" opacity="0.35" filter="url(#oLineGlow)" style={css("stroke-width: 6")} />
                   <path d="M306 0 C 284 120, 338 230, 298 460" stroke="#9DB4D8" style={css("stroke-width: 1.5; stroke-dasharray: 10 7")} />
                   <text x="32" y="56" fontSize="18" fill="#E8F4F2" style={css("font-weight: 600; letter-spacing: -0.02em")}>Salt Lake City</text>
-                  <text x="344" y="56" fontSize="18" fill="#A9C0BE" style={css("font-weight: 600; letter-spacing: -0.02em")}>[Millcreek]</text>
+                  <text x="344" y="56" fontSize="18" fill="#A9C0BE" style={css("font-weight: 600; letter-spacing: -0.02em")}>Millcreek</text>
                   <rect x="314" y="190" width="32" height="32" fill="#6EE7C8" opacity="0.6" filter="url(#oBloom)" />
                   <rect x="322" y="198" width="16" height="16" fill="#6EE7C8" stroke="#FFE2B0" style={css("stroke-width: 1")} />
                   <path d="M340 202 L418 150" stroke="#86A09D" style={css("stroke-width: 1")} />
@@ -40,12 +40,12 @@ export default function OutOfScopePage() {
           <div style={css("flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px")}>
             <h1 className="rise" style={css("margin: 0; font-size: 56px; font-weight: 600; letter-spacing: -0.04em; line-height: 0.98; color: #E8F4F2; max-width: 14ch")}>This address is outside Salt Lake City</h1>
             <p className="rise2" style={css("margin: 0; font-size: 20px; line-height: 1.5; color: #E8F4F2; max-width: 46ch")}>
-              [Street address] has a Salt Lake City mailing address, but the parcel is inside [Millcreek] city limits.
+              Some addresses say Salt Lake City in the mailing address but sit inside another city, such as Millcreek or South Salt Lake. This parcel is outside the city limits.
             </p>
             <p style={css("margin: 0; font-size: 18px; color: #A9C0BE; max-width: 52ch")}>
               Each city writes its own basement-apartment rules. We have only reviewed Salt Lake City&apos;s, so we won&apos;t guess.
             </p>
-            <Provenance kind="public_record" text="Public record: checked against UGRC city boundaries, [date]" size={14} />
+            <Provenance kind="public_record" text="Public record: checked against UGRC city boundaries" size={14} />
             <div style={css("display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px")}>
               <LinkBtn href="/">Check a different address</LinkBtn>
               <a
@@ -57,7 +57,7 @@ export default function OutOfScopePage() {
                   "display: inline-flex; align-items: center; gap: 12px; height: 56px; padding: 0 8px 0 24px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #E8F4F2; font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap; box-sizing: border-box",
                 )}
               >
-                Contact [Millcreek] planning
+                Contact that city's planning office
                 <span className="btn-ic" style={css("width: 40px; height: 40px; border-radius: 999px; background: rgba(255,255,255,0.08); display: inline-flex; align-items: center; justify-content: center")}>
                   <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
                     <path d="M4 12 L12 4 M6 4 H12 V10" fill="none" stroke="#E8F4F2" style={css("stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round")} />

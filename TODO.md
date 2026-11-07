@@ -5,7 +5,8 @@ Nothing here is guessed silently. Each item is something the app currently shows
 ## Must do before the demo
 
 - [ ] **Rules owner reads Salt Lake City 21A.40.200** in a browser (the code site blocks automated fetches) and updates `data/rules.json` and the `review` level in `data/sources.json` from `secondary` to `verified`. Check in particular: owner occupancy and its exceptions, the parking requirement, the one-unit rule, and whether there is any minimum lot size.
-- [ ] **Replace the three saved properties** in `data/properties.json` with real, verified Salt Lake City parcels (parcel ID, city confirmed by boundary, zone from the city zoning layer, retrieval date). Remove `"placeholder": true` once verified. The zone codes and numbers in there now are demo values.
+- [x] **Saved properties are real parcels, verified on 2026-11-06.** Parcel fields come from the Salt Lake County parcel service (`Parcels_SaltLake_LIR`), the city from the UGRC municipal boundary layer (queried by parcel location, not mailing address), and the zone from the city's own zoning layer (`maps.slc.gov` Hosted/Zoning layer 5). Zones found: R-1-5000 (Sugar House), SR-1A (Avenues), R-1-7000 (Rose Park). Addresses are shown at block level to keep residents' house numbers out of a public repo; the parcel IDs are public record. To use a different house, repeat the three queries described in `lib/lookup.ts` and edit `data/properties.json`.
+- [ ] Re-run those three queries right before judging if you change a property, and update `retrievedAt`.
 - [ ] Add `ANTHROPIC_API_KEY` to `.env.local` and test the plan email, the ask box and the photo coach with a real key.
 - [ ] Rehearse with Wi-Fi off (saved data and template text should still work).
 

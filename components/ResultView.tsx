@@ -103,6 +103,7 @@ export default function ResultView({ property, initialAnswers, rent }: { propert
             spill={0.3 + 0.7 * metFrac}
             person={answers.ownerLivesOnSite === "yes" ? 1 : answers.ownerLivesOnSite === "unknown" ? 0.25 : 0}
             car={1}
+            lotLabel={property.lotAcres.value !== null ? `Lot ${property.lotAcres.value} acres` : "Lot size unknown"}
             callouts={report.results.map((r) => ({ n: r.n, status: r.status }))}
           />
         </div>
@@ -272,7 +273,7 @@ export default function ResultView({ property, initialAnswers, rent }: { propert
         <LinkBtn href={`/photo/${property.id}?${query}`} variant="secondary">
           Check a window photo
         </LinkBtn>
-        <span style={css("font-size: 14px; color: #86A09D; margin-left: 8px")}>A screening tool, not legal advice. Rules reviewed [date].</span>
+        <span style={css("font-size: 14px; color: #86A09D; margin-left: 8px")}>A screening tool, not legal advice. Rule set {report.ruleVersion}.</span>
       </div>
     </main>
   );
